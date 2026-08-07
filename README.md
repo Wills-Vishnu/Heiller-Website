@@ -1,4 +1,4 @@
-# evadde
+# heiller
 
 Cinematic single-page site for a healthcare **Revenue Cycle Management** company.
 
@@ -146,7 +146,7 @@ gradient behind the **text column only** — not over the whole video.
 
 *The copy is not about this business.* "Foundation of the new digital epoch",
 "decentralized web", "builders and communities" is web3 infrastructure
-language. evadde sells revenue cycle management to hospital administrators.
+language. heiller sells revenue cycle management to hospital administrators.
 The page metadata, JSON-LD and all eight sections below say something
 completely different. See the warning on `videoHero` in `lib/site.ts`.
 
@@ -692,7 +692,7 @@ before JS runs.
 `.env.local`:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://evadde.com   # metadataBase, sitemap, JSON-LD
+NEXT_PUBLIC_SITE_URL=https://heiller.com   # metadataBase, sitemap, JSON-LD
 CONTACT_WEBHOOK_URL=                      # CRM / Zapier / ESP endpoint
 CONTACT_NOTIFY_EMAIL=sushanth3306@gmail.com
 ```
