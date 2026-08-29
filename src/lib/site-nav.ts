@@ -27,12 +27,12 @@ export type SiteNavItem =
       readonly items: readonly SiteNavLink[];
     };
 
-export const siteNav = [
+export const siteNav: readonly SiteNavItem[] = [
   { kind: 'link', label: 'Services', href: '/#services' },
   { kind: 'link', label: 'Why Heiller', href: '/#why-heiller' },
   { kind: 'link', label: 'Revenue audit', href: '/#revenue-audit' },
   { kind: 'link', label: 'Our team', href: '/team' },
-] as const satisfies readonly SiteNavItem[];
+];
 
 export const siteCta = { label: 'Get a free revenue audit', href: '/#revenue-audit' } as const;
 
