@@ -53,7 +53,7 @@ export function resistOverdrag(overshoot: number, max: number = EDGE_RESISTANCE_
  * In the infinite carousel there are no edges — the drag always passes
  * through 1:1. The `edge` parameter is kept for API compatibility.
  */
-export function applyEdgeResistance(rawDelta: number, _edge: EdgeState, _max: number = EDGE_RESISTANCE_MAX): number {
+export function applyEdgeResistance(rawDelta: number, _edge?: EdgeState, _max?: number): number {
   return rawDelta;
 }
 
