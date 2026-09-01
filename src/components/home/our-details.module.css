@@ -1,0 +1,245 @@
+.detailsSection {
+  position: relative;
+  width: 100%;
+  padding: calc(clamp(48px, 5vw, 80px) + 80px) 0 0 0;
+  background: transparent;
+}
+
+.detailsCard {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  min-height: clamp(480px, 38vw, 560px);
+  /* Make the left side completely white and smoothly blend to neutral on the right */
+  background: linear-gradient(to right, #ffffff 0%, #ffffff 42%, #f4f4f3 60%, #f4f4f3 100%);
+  border: 0;
+  border-radius: clamp(24px, 2.5vw, 36px);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.15fr);
+  align-items: stretch;
+}
+
+/* Left Content Column */
+.leftContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(40px, 4.5vw, 68px) clamp(32px, 3.8vw, 64px);
+  padding-left: 0; /* Align text flush with above section headings */
+  background: #ffffff; /* Keep left side completely white */
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #0a0a0a;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  margin-bottom: 14px;
+}
+
+.eyebrowDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a855f7 0%, #d946a8 50%, #f43f6e 100%);
+}
+
+.title {
+  font-size: clamp(38px, 4.2vw, 58px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: #0a0a0a;
+  margin: 0 0 16px 0;
+}
+
+.subtitle {
+  font-size: clamp(18px, 1.5vw, 24px);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #111111;
+  margin: 0 0 10px 0;
+}
+
+.addressGroup {
+  margin-bottom: clamp(24px, 3vw, 38px);
+  max-width: 420px;
+}
+
+.officeLabel {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #8b8f9a;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.addressText {
+  font-size: clamp(14px, 1.1vw, 16px);
+  line-height: 1.55;
+  color: #6f7480;
+  margin: 0;
+}
+
+.contactRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(18px, 2.2vw, 36px);
+  margin-bottom: clamp(24px, 2.8vw, 42px);
+}
+
+.contactItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: clamp(13.5px, 1.05vw, 15.5px);
+  color: #444854;
+}
+
+.contactPrefix {
+  font-weight: 600;
+  color: #8b8f9a;
+}
+
+.contactLink {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.contactLink:hover {
+  color: #ff6b2c;
+}
+
+/* Actions Row containing Open in Maps and Social Icons */
+.actionsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: auto;
+  border-top: 1px solid rgba(8, 8, 8, 0.08);
+  padding-top: 24px;
+}
+
+.mapExternalLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #8b8f9a;
+  text-decoration: none;
+  width: fit-content;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.mapExternalLink:hover {
+  color: #0a0a0a;
+  transform: translateX(2px);
+}
+
+.socialsList {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.socialLink {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f4f4f3;
+  color: #444854;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.socialLink svg {
+  width: 15px;
+  height: 15px;
+}
+
+.socialLink:hover {
+  background: #0a0a0a;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* Right Map Column */
+.mapWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  overflow: hidden;
+  background: #f4f4f3;
+  /* Smooth horizontal mask fade from white to map coordinates */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 10%, black 28%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 10%, black 28%);
+}
+
+/* Soft white gradient overlay reinforcing the transition into the white left content */
+.mapFadeOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  background: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0.75) 8%, rgba(255, 255, 255, 0.2) 22%, transparent 45%);
+}
+
+/* Fallback loading state */
+.mapFallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f3;
+  color: #888888;
+  font-size: 14px;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .detailsCard {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    background: #ffffff;
+  }
+
+  .leftContent {
+    padding: 36px 0 28px;
+  }
+
+  .actionsRow {
+    margin-top: 12px;
+  }
+
+  .mapWrapper {
+    min-height: 340px;
+    height: 360px;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 8%, black 20%);
+    mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 8%, black 20%);
+    background: #f4f4f3;
+  }
+
+  .mapFadeOverlay {
+    background: linear-gradient(to bottom, #f4f4f3 0%, rgba(244, 244, 243, 0.75) 6%, transparent 25%);
+  }
+}
