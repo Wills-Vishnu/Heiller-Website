@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>Heiller | Revenue cycle management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500&family=Geist:wght@400;500&display=swap" />
+<link rel="stylesheet" href="/styles.css" />
+  <script src="/vt-silence.js"></script>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ══ NAV (absolute) ══ -->
+    <header class="nav">
+      <div class="nav__inner">
+        <div class="nav__row">
+          <!-- logo -->
+          <a class="nav__brand" href="#hero" aria-label="Heiller home">
+            <svg width="38" height="38" viewBox="0 7.5 38 38" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" d="M9.5 36C9.5 41.247 5.248 45.5 0 45.5L0 36C0 30.752 4.254 26.5 9.5 26.5ZM19 26.5C24.248 26.5 28.5 30.752 28.5 36L28.5 45.5C23.254 45.5 19 41.247 19 36 19 41.247 14.748 45.5 9.5 45.5L9.5 36C9.5 30.752 13.754 26.5 19 26.5ZM28.5 26.5C33.748 26.5 38 30.752 38 36L38 45.5C32.754 45.5 28.5 41.247 28.5 36ZM0 7.5C5.248 7.5 9.5 11.752 9.5 17L9.5 26.5C4.254 26.5 0 22.247 0 17ZM28.5 17C28.5 22.247 24.248 26.5 19 26.5 13.754 26.5 9.5 22.247 9.5 17L9.5 7.5C14.748 7.5 19 11.752 19 17 19 11.752 23.254 7.5 28.5 7.5ZM38 17C38 22.247 33.748 26.5 28.5 26.5L28.5 17C28.5 11.752 32.754 7.5 38 7.5Z"/>
+            </svg>
+            <span class="nav__brand-name">Heiller</span>
+          </a>
+          <!-- links -->
+          <nav class="nav__links">
+            <a class="nav__item" href="#services">Services</a>
+            <a class="nav__item" href="#why-heiller">Why Heiller</a>
+            <a class="nav__item" href="#results">Results</a>
+            <div class="nav__divider">|</div>
+            <a class="nav__item" href="#specialties" data-drawer-open="specialties-drawer">Specialties</a>
+          </nav>
+          <!-- cta -->
+          <a class="btn-demo" href="#booking-calendar"><span>Get a free revenue audit</span>
+            <svg class="cta-arrow" viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.111 2.598L1.511 10.199L0.804 9.492L8.41 1.885L2.14 1.885L2.14 0.885L9.611 0.885L10.111 0.885L10.111 1.385L10.111 8.856L9.111 8.856L9.111 2.598Z" fill="rgb(0 0 0)"/></svg>
+          </a>
+          <!-- Takes the CTA's place below 960px; the CTA moves into the sheet. -->
+          <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+            <span class="nav__toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+          </button>
+        </div>
+        <!-- Mobile sheet. Lives inside the nav so it inherits the fixed
+             positioning and drops directly beneath the bar. -->
+        <div class="nav__menu" id="nav-menu" data-nav-menu>
+          <nav class="nav__menu-links" aria-label="Mobile">
+            <a class="nav__menu-item" href="#services">Services</a>
+            <a class="nav__menu-item" href="#why-heiller">Why Heiller</a>
+            <a class="nav__menu-item" href="#results">Results</a>
+            <a class="nav__menu-item" href="#specialties" data-drawer-open="specialties-drawer">Specialties</a>
+          </nav>
+          <a class="nav__menu-cta" href="mailto:connect@heillerrcm.com"><span>connect@heillerrcm.com</span>
+            <svg class="cta-mail" viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="1.5" stroke="currentColor"/><path d="M2 4.5L8 8.5L14 4.5" stroke="currentColor" stroke-linecap="round"/></svg>
+          </a>
+          <a class="nav__menu-cta" href="#booking-calendar"><span>Get a free revenue audit</span>
+            <svg class="cta-arrow" viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.111 2.598L1.511 10.199L0.804 9.492L8.41 1.885L2.14 1.885L2.14 0.885L9.611 0.885L10.111 0.885L10.111 1.385L10.111 8.856L9.111 8.856L9.111 2.598Z" fill="rgb(0 0 0)"/></svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ══ CONTENT (flow) ══ -->
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <canvas class="hero-bg" aria-hidden="true"></canvas>
+      <div class="hero__head">
+        <h1 class="hero__title">Take care of your patients <br />while we take care of your <br /><span
+            class="hero__morph"
+            data-hero-morph
+            data-words="revenue|registration|coding|claims|recovery|follow-up|reports"
+          ><span class="hero__morph-a11y">revenue</span><span class="hero__morph-track" aria-hidden="true">revenue</span></span></h1>
+        <p class="hero__sub">One accountable team handles the work behind every claim, from coding through payment.</p>
+      </div>
+      <div class="hero__flow">
+        <div class="flow__stage">
+          <div class="flow__tags">
+            <svg class="flow__wires" viewBox="0 0 1079 275" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="route-patient-verify" gradientUnits="userSpaceOnUse" x1="50.5" y1="65" x2="129" y2="72.5"><stop offset="0%" stop-color="#FFAB8D" /><stop offset="100%" stop-color="#FC7EC7" /></linearGradient>
+                <linearGradient id="route-verify-code" gradientUnits="userSpaceOnUse" x1="187.5" y1="109" x2="230" y2="159.5"><stop offset="0%" stop-color="#FC7EC7" /><stop offset="100%" stop-color="#B3A5F5" /></linearGradient>
+                <linearGradient id="route-code-claim" gradientUnits="userSpaceOnUse" x1="288.5" y1="196" x2="331" y2="246.5"><stop offset="0%" stop-color="#B3A5F5" /><stop offset="100%" stop-color="#B4E7BC" /></linearGradient>
+                <linearGradient id="route-claim-process" gradientUnits="userSpaceOnUse" x1="448" y1="246.5" x2="645" y2="246.5"><stop offset="0%" stop-color="#B4E7BC" /><stop offset="100%" stop-color="#96D7FF" /></linearGradient>
+                <linearGradient id="route-process-payment" gradientUnits="userSpaceOnUse" x1="703.5" y1="210" x2="739" y2="159.5"><stop offset="0%" stop-color="#96D7FF" /><stop offset="100%" stop-color="#FAE261" /></linearGradient>
+                <linearGradient id="route-payment-report" gradientUnits="userSpaceOnUse" x1="797.5" y1="123" x2="833" y2="72.5"><stop offset="0%" stop-color="#FAE261" /><stop offset="100%" stop-color="#97B6FF" /></linearGradient>
+                <linearGradient id="route-report-optimize" gradientUnits="userSpaceOnUse" x1="891.5" y1="36" x2="970" y2="28.5"><stop offset="0%" stop-color="#97B6FF" /><stop offset="100%" stop-color="#4A2A76" /></linearGradient>
+              </defs>
+              <!-- grey dashed track, one rounded segment from each origin square to the next arrowhead -->
+              <path class="wire-track" d="M50.5 65 L50.5 68.75 Q50.5 72.5 54.25 72.5 L121 72.5" />
+              <path class="wire-track" d="M187.5 109 L187.5 142.25 Q187.5 159.5 204.75 159.5 L222 159.5" />
+              <path class="wire-track" d="M288.5 196 L288.5 229.25 Q288.5 246.5 305.75 246.5 L323 246.5" />
+              <path class="wire-track" d="M448 246.5 L637 246.5" />
+              <path class="wire-track" d="M703.5 210 L703.5 173.25 Q703.5 159.5 717.25 159.5 L731 159.5" />
+              <path class="wire-track" d="M797.5 123 L797.5 86.25 Q797.5 72.5 811.25 72.5 L825 72.5" />
+              <path class="wire-track" d="M891.5 36 L891.5 32.25 Q891.5 28.5 895.25 28.5 L962 28.5" />
+
+              <!-- grey arrowheads: taller, rounded tip, 8px gap before the box -->
+              <path class="wire-arrow" d="M121 65.5 L129 72.5 L121 79.5" />
+              <path class="wire-arrow" d="M222 152.5 L230 159.5 L222 166.5" />
+              <path class="wire-arrow" d="M323 239.5 L331 246.5 L323 253.5" />
+              <path class="wire-arrow" d="M637 239.5 L645 246.5 L637 253.5" />
+              <path class="wire-arrow" d="M731 152.5 L739 159.5 L731 166.5" />
+              <path class="wire-arrow" d="M825 65.5 L833 72.5 L825 79.5" />
+              <path class="wire-arrow" d="M962 21.5 L970 28.5 L962 35.5" />
+
+              <!-- solid route overlays draw over the dashed network in sequence -->
+              <path class="wire-travel" pathLength="100" style="--phase:0s;--route-stroke:url(#route-patient-verify)" d="M50.5 65 L50.5 68.75 Q50.5 72.5 54.25 72.5 L121 72.5" />
+              <path class="wire-travel-arrow" pathLength="100" style="--phase:0s;--arrow-color:#FC7EC7" d="M121 65.5 L129 72.5 L121 79.5" />
+              <path class="wire-travel" pathLength="100" style="--phase:1.1s;--route-stroke:url(#route-verify-code)" d="M187.5 109 L187.5 142.25 Q187.5 159.5 204.75 159.5 L222 159.5" />
+              <path class="wire-travel-arrow" pathLength="100" style="--phase:1.1s;--arrow-color:#B3A5F5" d="M222 152.5 L230 159.5 L222 166.5" />
+              <path class="wire-travel" pathLength="100" style="--phase:2.2s;--route-stroke:url(#route-code-claim)" d="M288.5 196 L288.5 229.25 Q288.5 246.5 305.75 246.5 L323 246.5" />
+              <path class="wire-travel-arrow" pathLength="100" style="--phase:2.2s;--arrow-color:#B4E7BC" d="M323 239.5 L331 246.5 L323 253.5" />
+              <path class="wire-travel" pathLength="100" style="--phase:3.3s;--route-stroke:url(#route-claim-process)" d="M448 246.5 L637 246.5" />
+              <path class="wire-travel-arrow" pathLength="100" style="--phase:3.3s;--arrow-color:#96D7FF" d="M637 239.5 L645 246.5 L637 253.5" />
+              <path class="wire-travel" pathLength="100" style="--phase:4.4s;--route-stroke:url(#route-process-payment)" d="M703.5 210 L703.5 173.25 Q703.5 159.5 717.25 159.5 L731 159.5" />
+              <path class="wire-travel-arrow" pathLength="100" style="--phase:4.4s;--arrow-color:#FAE261" d="M731 152.5 L739 159.5 L731 166.5" />
+              <path class="wire-travel" pathLength="100" style="--phase:5.5s;--route-stroke:url(#route-payment-report)" d="M797.5 123 L797.5 86.25 Q797.5 72.5 811.25 72.5 L825 72.5" />
+              <path class="wire-travel-arrow" pathLength="100" style="--phase:5.5s;--arrow-color:#97B6FF" d="M825 65.5 L833 72.5 L825 79.5" />
+              <path class="wire-travel" pathLength="100" style="--phase:6.6s;--route-stroke:url(#route-report-optimize)" d="M891.5 36 L891.5 32.25 Q891.5 28.5 895.25 28.5 L962 28.5" />
+              <path class="wire-travel-arrow" pathLength="100" style="--phase:6.6s;--arrow-color:#4A2A76" d="M962 21.5 L970 28.5 L962 35.5" />
+
+              <!-- neutral ports inherit the active route state -->
+              <rect class="wire-port" style="--phase:0s;--source-color:#FFAB8D" x="48" y="62.5" width="5" height="5" rx="1" />
+              <rect class="wire-port" style="--phase:1.1s;--source-color:#FC7EC7" x="185" y="106.5" width="5" height="5" rx="1" />
+              <rect class="wire-port" style="--phase:2.2s;--source-color:#B3A5F5" x="286" y="193.5" width="5" height="5" rx="1" />
+              <rect class="wire-port" style="--phase:3.3s;--source-color:#B4E7BC" x="445.5" y="244" width="5" height="5" rx="1" />
+              <rect class="wire-port" style="--phase:4.4s;--source-color:#96D7FF" x="701" y="207.5" width="5" height="5" rx="1" />
+              <rect class="wire-port" style="--phase:5.5s;--source-color:#FAE261" x="795" y="120.5" width="5" height="5" rx="1" />
+              <rect class="wire-port" style="--phase:6.6s;--source-color:#97B6FF" x="889" y="33.5" width="5" height="5" rx="1" />
+            </svg>
+            <div class="tag tag--start" style="left:0;top:0;--node-delay:0s;--node-color:#FFAB8D;"><span class="tag__label">Patient</span></div>
+            <div class="tag" style="left:137px;top:44px;--node-delay:0.9s;--node-color:#FC7EC7;"><span class="tag__label">Verify</span></div>
+            <div class="tag" style="left:238px;top:131px;--node-delay:2s;--node-color:#B3A5F5;"><span class="tag__label">Code</span></div>
+            <div class="tag" style="left:339px;top:218px;--node-delay:3.1s;--node-color:#B4E7BC;"><span class="tag__label">Claim</span></div>
+            <div class="tag" style="left:653px;top:218px;--node-delay:4.2s;--node-color:#96D7FF;"><span class="tag__label">Process</span></div>
+            <div class="tag" style="left:747px;top:131px;--node-delay:5.3s;--node-color:#FAE261;"><span class="tag__label">Payment</span></div>
+            <div class="tag" style="left:841px;top:44px;--node-delay:6.4s;--node-color:#97B6FF;"><span class="tag__label">Report</span></div>
+            <div class="tag tag--terminal" style="left:978px;top:0;--node-delay:7.4s;--node-color:#4A2A76;--active-text:#FFFFFF;"><span class="tag__label">Optimize</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIPAA trust bar -->
+    <section class="trust">
+      <div class="trust__box">
+        <div class="trust__tab">
+          <span>HIPAA compliant</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C6.063 1.25 1.25 6.063 1.25 12C1.25 17.937 6.063 22.75 12 22.75C17.937 22.75 22.75 17.937 22.75 12C22.75 6.063 17.937 1.25 12 1.25ZM7.53 11.97C7.238 11.677 6.763 11.677 6.47 11.97C6.177 12.263 6.177 12.737 6.47 13.03L9.47 16.03C9.763 16.323 10.238 16.323 10.53 16.03L17.53 9.03C17.823 8.737 17.823 8.263 17.53 7.97C17.238 7.677 16.763 7.677 16.47 7.97L10 14.439L7.53 11.97Z" fill="#00BB35"/>
+          </svg>
+        </div>
+        <div class="trust__panel">
+          <div class="trust__item">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 16V11.361C7 10.852 7.1 10.362 7.285 9.908M17 13.5V12.815M9.222 7.734C10.017 7.271 10.972 7 12 7C14.28 7 16.203 8.331 16.805 10.15" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 17V14.823M14 17V11.853C14 10.83 13.105 10 12 10C10.895 10 10 10.83 10 11.853V12.647" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M14 21.8C13.354 21.931 12.685 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 12.254 21.991 12.506 21.972 12.755" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21.167 18.5H21.4C21.731 18.5 22 18.769 22 19.1V21.4C22 21.731 21.731 22 21.4 22H17.6C17.269 22 17 21.731 17 21.4V19.1C17 18.769 17.269 18.5 17.6 18.5H17.833M21.167 18.5V16.75C21.167 16.167 20.833 15 19.5 15C18.167 15 17.833 16.167 17.833 16.75V18.5M21.167 18.5H17.833" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Encryption</span>
+          </div>
+          <div class="trust__item">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 21H15M9 21V16M9 21H3.6C3.269 21 3 20.731 3 20.4V16.6C3 16.269 3.269 16 3.6 16H9M15 21V9M15 21H20.4C20.731 21 21 20.731 21 20.4V3.6C21 3.269 20.731 3 20.4 3H15.6C15.269 3 15 3.269 15 3.6V9M15 9H9.6C9.269 9 9 9.269 9 9.6V16" fill="none" stroke="#000" stroke-width="1.5"/>
+            </svg>
+            <span>Audit Trails</span>
+          </div>
+          <div class="trust__item">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 18L11 21L16 16" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20 17.607C21.494 17.022 23 15.689 23 13C23 9 19.667 8 18 8C18 6 18 2 12 2C6 2 6 6 6 8C4.333 8 1 9 1 13C1 15.689 2.506 17.022 4 17.607" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Secure Cloud</span>
+          </div>
+          <div class="trust__item">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.667 12H15.4C15.731 12 16 12.269 16 12.6V16.4C16 16.731 15.731 17 15.4 17H8.6C8.269 17 8 16.731 8 16.4V12.6C8 12.269 8.269 12 8.6 12H9.333M14.667 12V9.5C14.667 8.667 14.133 7 12 7C9.867 7 9.333 8.667 9.333 9.5V12M14.667 12H9.333" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 19V5C3 3.895 3.895 3 5 3H19C20.105 3 21 3.895 21 5V19C21 20.105 20.105 21 19 21H5C3.895 21 3 20.105 3 19Z" fill="none" stroke="#000" stroke-width="1.5"/>
+            </svg>
+            <span>Access Control</span>
+          </div>
+          <div class="trust__item">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 9L13.75 9.375M10 9C9.088 7.786 7.636 7 6 7C3.239 7 1 9.239 1 12C1 14.761 3.239 17 6 17C7.636 17 9.088 16.214 10 15L10.334 14.5" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 9L14 15C14.912 16.214 16.364 17 18 17C20.761 17 23 14.761 23 12C23 9.239 20.761 7 18 7C16.364 7 14.912 7.786 14 9" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Continuity</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+      <div class="services__inner">
+        <div class="services__intro">
+          <div class="eyebrow"><i></i><span>Our services</span></div>
+          <div class="services__lead">
+            <h2>One team for your<br />revenue cycle</h2>
+            <p>Use us for one part of your revenue cycle or the whole thing. Each claim has a clear owner, and we track every handoff until the work is done.</p>
+          </div>
+        </div>
+        <div class="services__visual">
+          <svg width="0" height="0" aria-hidden="true" focusable="false">
+            <defs>
+              <filter id="services-liquid-refraction" x="-20%" y="-30%" width="140%" height="160%" color-interpolation-filters="sRGB">
+                <feTurbulence type="fractalNoise" baseFrequency="0.009 0.022" numOctaves="2" seed="8" result="noise"></feTurbulence>
+                <feGaussianBlur in="noise" stdDeviation="2.5" result="softNoise"></feGaussianBlur>
+                <feDisplacementMap in="SourceGraphic" in2="softNoise" scale="24" xChannelSelector="R" yChannelSelector="B" result="refracted"></feDisplacementMap>
+                <feGaussianBlur in="refracted" stdDeviation="0.35"></feGaussianBlur>
+              </filter>
+            </defs>
+          </svg>
+          <div class="services__image-field" aria-hidden="true"></div>
+          <div class="services-paper-shader" data-services-shader aria-hidden="true"></div>
+          <div class="services__noise" aria-hidden="true"></div>
+        </div>
+        <div class="cards">
+            <article class="card">
+              <div class="card__head">
+                <div class="card__icon" style="background-image:url(icons/sec-hipaa.svg)"></div>
+                <div class="card__title">HIPAA-conscious</div>
+              </div>
+              <div class="card__body">Safeguards and working practices are designed around the responsible handling of protected health information.</div>
+            </article>
+            <article class="card">
+              <div class="card__head">
+                <div class="card__icon" style="background-image:url(icons/sec-access.svg)"></div>
+                <div class="card__title">Controlled access</div>
+              </div>
+              <div class="card__body">Named access and clear ownership keep sensitive work limited to the people responsible for it.</div>
+            </article>
+            <article class="card">
+              <div class="card__head">
+                <div class="card__icon" style="background-image:url(icons/sec-movement.svg)"></div>
+                <div class="card__title">Protected movement</div>
+              </div>
+              <div class="card__body">Sensitive information is protected while it moves between systems and while it is stored.</div>
+            </article>
+            <article class="card">
+              <div class="card__head">
+                <div class="card__icon" style="background-image:url(icons/sec-traceable.svg)"></div>
+                <div class="card__title">Traceable activity</div>
+              </div>
+              <div class="card__body">Important actions stay attributable so questions can be investigated instead of guessed at.</div>
+            </article>
+            <article class="card">
+              <div class="card__head">
+                <div class="card__icon" style="background-image:url(icons/sec-infrastructure.svg)"></div>
+                <div class="card__title">Secure infrastructure</div>
+              </div>
+              <div class="card__body">Operational systems are structured to reduce unnecessary exposure and fragile handoffs.</div>
+            </article>
+            <article class="card">
+              <div class="card__head">
+                <div class="card__icon" style="background-image:url(icons/sec-continuity.svg)"></div>
+                <div class="card__title">Continuity by design</div>
+              </div>
+              <div class="card__body">Documented ownership and recovery practices keep revenue work moving when conditions change.</div>
+            </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dedicated team -->
+    <section class="dedicated-team" aria-labelledby="dedicated-team-title">
+      <div class="dedicated-team__field" data-dedicated-field>
+        <svg class="dedicated-team__mark" aria-hidden="true" focusable="false" viewBox="47 -407.5 406 406">
+          <path d="M351.75 -204.5L351.75 -306.25C351.75 -362.459 397.313 -408 453.5 -408L453.5 -306.25C453.5 -250.051 407.959 -204.5 351.75 -204.5ZM453.5 -1C397.313 -1 351.75 -46.551 351.75 -102.75L351.75 -204.5C407.959 -204.5 453.5 -158.959 453.5 -102.75L453.5 -1ZM148.25 -102.75C148.25 -46.551 102.709 -1 46.5 -1L46.5 -102.75C46.5 -158.959 92.063 -204.5 148.25 -204.5L148.25 -102.75ZM46.5 -408C102.709 -408 148.25 -362.459 148.25 -306.25L148.25 -204.5C92.063 -204.5 46.5 -250.051 46.5 -306.25L46.5 -408ZM250 -204.5C306.209 -204.5 351.75 -158.959 351.75 -102.75L351.75 -1C295.563 -1 250 -46.551 250 -102.75C250 -46.551 204.459 -1 148.25 -1L148.25 -102.75C148.25 -158.959 193.813 -204.5 250 -204.5ZM351.75 -306.25C351.75 -250.051 306.209 -204.5 250 -204.5C193.813 -204.5 148.25 -250.051 148.25 -306.25L148.25 -408C204.459 -408 250 -362.459 250 -306.25C250 -362.459 295.563 -408 351.75 -408L351.75 -306.25Z" fill="currentColor" />
+        </svg>
+        <h2 id="dedicated-team-title">
+          <span class="dedicated-team__title-copy">
+            <span class="dedicated-team__title-line">A dedicated team,</span>
+            <span class="dedicated-team__title-line">fully embedded</span>
+          </span>
+          <canvas class="dedicated-team__title-gl" aria-hidden="true"></canvas>
+        </h2>
+        <div class="dedicated-team__pills" aria-hidden="true">
+          <span class="dedicated-team__pill" data-dedicated-pill style="--pill-from:#f49cff;--pill-to:#b725d0;--pill-accent:#705cff"><span class="dedicated-team__pill-label">Credentialing</span></span>
+          <span class="dedicated-team__pill" data-dedicated-pill style="--pill-from:#ff9b7d;--pill-to:#f43725;--pill-accent:#ffcf62"><span class="dedicated-team__pill-label">Patient registration</span></span>
+          <span class="dedicated-team__pill" data-dedicated-pill style="--pill-from:#8ee8b8;--pill-to:#16bd72;--pill-accent:#56d6d6"><span class="dedicated-team__pill-label">Coding</span></span>
+          <span class="dedicated-team__pill" data-dedicated-pill style="--pill-from:#ffe889;--pill-to:#f4ca17;--pill-accent:#ff9d57"><span class="dedicated-team__pill-label">Billing</span></span>
+          <span class="dedicated-team__pill" data-dedicated-pill style="--pill-from:#91b5ff;--pill-to:#3d6de8;--pill-accent:#8c62ee"><span class="dedicated-team__pill-label">Denial management</span></span>
+          <span class="dedicated-team__pill" data-dedicated-pill style="--pill-from:#ff9ac9;--pill-to:#f05098;--pill-accent:#c55cff"><span class="dedicated-team__pill-label">A/R follow-up</span></span>
+          <span class="dedicated-team__pill" data-dedicated-pill style="--pill-from:#ffc06c;--pill-to:#ee7b24;--pill-accent:#ff5f55"><span class="dedicated-team__pill-label">Eligibility</span></span>
+          <span class="dedicated-team__pill" data-dedicated-pill style="--pill-from:#9be8d6;--pill-to:#50c9aa;--pill-accent:#63a7ff"><span class="dedicated-team__pill-label">Revenue reporting</span></span>
+          <span class="dedicated-team__pill" data-dedicated-pill style="--pill-from:#C8BBFF;--pill-to:#8F79F2;--pill-accent:#E0D5FF"><span class="dedicated-team__pill-label">Authorization</span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="v3-why" id="why-heiller" aria-labelledby="why-title">
+      <div class="v3-why__inner">
+        <div class="v3-why__intro">
+          <h2 id="why-title">Built to stay close to the work.</h2>
+          <p>At Heiller, we work as an extension of your team. We take ownership, stay close to the work, and keep every handoff visible.</p>
+          <a class="v3-action v3-why__cta" href="#team-extension">See how we work <svg class="cta-arrow" viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.111 2.598L1.511 10.199L0.804 9.492L8.41 1.885L2.14 1.885L2.14 0.885L9.611 0.885L10.111 0.885L10.111 1.385L10.111 8.856L9.111 8.856L9.111 2.598Z" fill="currentColor"/></svg></a>
+        </div>
+        <div class="v3-reasons">
+          <article class="v3-reason"><h3>1. One accountable owner</h3><p>Every claim and handoff has a named owner, so work does not disappear between teams.</p></article>
+          <article class="v3-reason"><h3>2. Fewer stalled handoffs</h3><p>The next action stays visible, helping queues move without repeated status chasing.</p></article>
+          <article class="v3-reason"><h3>3. Revenue-cycle focus</h3><p>The operating model is built around registration, coding, billing, denials, and collections.</p></article>
+          <article class="v3-reason"><h3>4. Work you can inspect</h3><p>Reporting shows what moved, what stalled, and where attention is needed next.</p></article>
+          <article class="v3-reason"><h3>5. A flexible extension</h3><p>Use Heiller for one revenue-cycle function or connect the work across the full cycle.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="v3-work" id="team-extension" aria-labelledby="work-title">
+      <div class="v3-work__inner">
+        <svg class="v3-work__edge-mark v3-work__edge-mark--left" aria-hidden="true" focusable="false" viewBox="47 -407.5 406 406">
+          <path d="M351.75 -204.5L351.75 -306.25C351.75 -362.459 397.313 -408 453.5 -408L453.5 -306.25C453.5 -250.051 407.959 -204.5 351.75 -204.5ZM453.5 -1C397.313 -1 351.75 -46.551 351.75 -102.75L351.75 -204.5C407.959 -204.5 453.5 -158.959 453.5 -102.75L453.5 -1ZM148.25 -102.75C148.25 -46.551 102.709 -1 46.5 -1L46.5 -102.75C46.5 -158.959 92.063 -204.5 148.25 -204.5L148.25 -102.75ZM46.5 -408C102.709 -408 148.25 -362.459 148.25 -306.25L148.25 -204.5C92.063 -204.5 46.5 -250.051 46.5 -306.25L46.5 -408ZM250 -204.5C306.209 -204.5 351.75 -158.959 351.75 -102.75L351.75 -1C295.563 -1 250 -46.551 250 -102.75C250 -46.551 204.459 -1 148.25 -1L148.25 -102.75C148.25 -158.959 193.813 -204.5 250 -204.5ZM351.75 -306.25C351.75 -250.051 306.209 -204.5 250 -204.5C193.813 -204.5 148.25 -250.051 148.25 -306.25L148.25 -408C204.459 -408 250 -362.459 250 -306.25C250 -362.459 295.563 -408 351.75 -408L351.75 -306.25Z" fill="currentColor" />
+        </svg>
+        <svg class="v3-work__edge-mark v3-work__edge-mark--right" aria-hidden="true" focusable="false" viewBox="47 -407.5 406 406">
+          <path d="M351.75 -204.5L351.75 -306.25C351.75 -362.459 397.313 -408 453.5 -408L453.5 -306.25C453.5 -250.051 407.959 -204.5 351.75 -204.5ZM453.5 -1C397.313 -1 351.75 -46.551 351.75 -102.75L351.75 -204.5C407.959 -204.5 453.5 -158.959 453.5 -102.75L453.5 -1ZM148.25 -102.75C148.25 -46.551 102.709 -1 46.5 -1L46.5 -102.75C46.5 -158.959 92.063 -204.5 148.25 -204.5L148.25 -102.75ZM46.5 -408C102.709 -408 148.25 -362.459 148.25 -306.25L148.25 -204.5C92.063 -204.5 46.5 -250.051 46.5 -306.25L46.5 -408ZM250 -204.5C306.209 -204.5 351.75 -158.959 351.75 -102.75L351.75 -1C295.563 -1 250 -46.551 250 -102.75C250 -46.551 204.459 -1 148.25 -1L148.25 -102.75C148.25 -158.959 193.813 -204.5 250 -204.5ZM351.75 -306.25C351.75 -250.051 306.209 -204.5 250 -204.5C193.813 -204.5 148.25 -250.051 148.25 -306.25L148.25 -408C204.459 -408 250 -362.459 250 -306.25C250 -362.459 295.563 -408 351.75 -408L351.75 -306.25Z" fill="currentColor" />
+        </svg>
+        <header class="v3-work__head"><h2 id="work-title">We work as an extension of your team</h2></header>
+        <div class="v3-ledger" data-workflow-ledger>
+          <svg class="v3-ledger__flow" data-ledger-flow aria-hidden="true">
+            <defs>
+              <linearGradient id="v3-ledger-gradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#CFDFFF"/>
+                <stop offset=".25" stop-color="#5A96F5"/>
+                <stop offset=".5" stop-color="#A5A9F2"/>
+                <stop offset=".75" stop-color="#F7CE3F"/>
+                <stop offset="1" stop-color="#FFD84A"/>
+              </linearGradient>
+              <linearGradient id="v3-ledger-fade" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="64">
+                <stop offset="0" stop-color="black"/>
+                <stop offset="1" stop-color="white"/>
+              </linearGradient>
+              <!-- Mirror of the opening fade: the route dissolves over the last
+                   stretch instead of stopping on a hard dash. Both the gradient
+                   and its rect are positioned in script, since the end of the
+                   route depends on the measured layout. -->
+              <linearGradient id="v3-ledger-fade-end" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="64" data-ledger-fade-end>
+                <stop offset="0" stop-color="white"/>
+                <stop offset="1" stop-color="black"/>
+              </linearGradient>
+              <mask id="v3-ledger-start-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                <rect x="0" y="0" width="100%" height="100%" fill="url(#v3-ledger-fade)"/>
+                <rect x="0" y="0" width="100%" height="64" fill="url(#v3-ledger-fade-end)" data-ledger-fade-end-rect/>
+              </mask>
+            </defs>
+            <g mask="url(#v3-ledger-start-mask)">
+              <path class="v3-ledger__track" data-ledger-track></path>
+              <path class="v3-ledger__fill" data-ledger-fill pathLength="1"></path>
+            </g>
+          </svg>
+          <ol class="v3-ledger__rows">
+            <li class="v3-ledger__row" data-workflow-row><div class="v3-ledger__stage"><span class="metric-mesh-value v3-ledger__index" data-metric-mesh-value data-metric-index="0"><span class="metric-mesh-fallback">01</span></span><h3>Intake and registration</h3></div></li>
+            <li class="v3-ledger__row" data-workflow-row><div class="v3-ledger__stage"><span class="metric-mesh-value v3-ledger__index" data-metric-mesh-value data-metric-index="1"><span class="metric-mesh-fallback">02</span></span><h3>Coding and claim preparation</h3></div></li>
+            <li class="v3-ledger__row" data-workflow-row><div class="v3-ledger__stage"><span class="metric-mesh-value v3-ledger__index" data-metric-mesh-value data-metric-index="2"><span class="metric-mesh-fallback">03</span></span><h3>Claim submission</h3></div></li>
+            <li class="v3-ledger__row" data-workflow-row><div class="v3-ledger__stage"><span class="metric-mesh-value v3-ledger__index" data-metric-mesh-value data-metric-index="3"><span class="metric-mesh-fallback">04</span></span><h3>Denial recovery</h3></div></li>
+            <li class="v3-ledger__row" data-workflow-row><div class="v3-ledger__stage"><span class="metric-mesh-value v3-ledger__index" data-metric-mesh-value data-metric-index="4"><span class="metric-mesh-fallback">05</span></span><h3>A/R follow-up</h3></div></li>
+            <li class="v3-ledger__row" data-workflow-row><div class="v3-ledger__stage"><span class="metric-mesh-value v3-ledger__index" data-metric-mesh-value data-metric-index="5"><span class="metric-mesh-fallback">06</span></span><h3>Revenue reporting</h3></div></li>
+          </ol>
+          <div class="v3-ledger__foot"><a class="v3-action" href="#revenue-audit"><span>Start with a revenue audit</span><svg class="cta-arrow" viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.111 2.598L1.511 10.199L0.804 9.492L8.41 1.885L2.14 1.885L2.14 0.885L9.611 0.885L10.111 0.885L10.111 1.385L10.111 8.856L9.111 8.856L9.111 2.598Z" fill="currentColor"/></svg></a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="v3-results" id="results" aria-labelledby="results-title">
+      <div class="v3-results__inner">
+        <header class="v3-results__head">
+          <div class="eyebrow"><i aria-hidden="true"></i><span>Performance standard</span></div>
+          <h2 id="results-title"><span>Measure the work</span><span>that moves revenue.</span></h2>
+        </header>
+        <div class="v3-metrics">
+          <article data-result-metric><strong class="metric-mesh-value" data-metric-mesh-value data-metric-index="6"><span class="metric-mesh-fallback">95%</span></strong><h3>Clean claim rate</h3><p>Operating target based on a strong first-submission benchmark.</p></article>
+          <article data-result-metric><strong class="metric-mesh-value" data-metric-mesh-value data-metric-index="7"><span class="metric-mesh-fallback">5%</span></strong><h3>Denial rate</h3><p>Target ceiling measured against common industry benchmarks.</p></article>
+          <article data-result-metric><strong class="metric-mesh-value" data-metric-mesh-value data-metric-index="8"><span class="metric-mesh-fallback">35</span></strong><h3>Days in A/R</h3><p>Target within a 30 to 40 day benchmark range.</p></article>
+          <article data-result-metric><strong class="metric-mesh-value" data-metric-mesh-value data-metric-index="9"><span class="metric-mesh-fallback">96%</span></strong><h3>Net collection rate</h3><p>Target measured against an effective-collection benchmark.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 01: Free Revenue Audit -->
+    <section class="future-section audit" id="revenue-audit" aria-labelledby="audit-title">
+      <div class="future-section__inner">
+
+        <div class="audit__head">
+          <div>
+            <div class="eyebrow"><i></i><span>Free revenue audit</span></div>
+            <h2 id="audit-title">See where revenue is getting stuck.</h2>
+          </div>
+        </div>
+
+        <!-- Flow overlay: a grey dashed track snakes along the row
+             dividers and down to the CTA on mobile, or the calendar on
+             desktop; a gradient route draws through it on scroll,
+             arriving with an arrowhead. Geometry is computed from the
+             live layout in the script below. -->
+        <svg class="audit__flow" aria-hidden="true" width="0" height="0">
+          <defs>
+            <linearGradient id="audit-route-grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#F7CE3F" />
+              <stop offset="0.4" stop-color="#B8C7FF" />
+              <stop offset="0.68" stop-color="#6FA8FF" />
+              <stop offset="1" stop-color="#245CFF" />
+            </linearGradient>
+            <linearGradient id="audit-entry-fade-grad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="100">
+              <stop offset="0" stop-color="black" />
+              <stop offset="1" stop-color="white" />
+            </linearGradient>
+            <mask id="audit-entry-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="1" height="1">
+              <rect class="audit__fade-rect" x="0" y="0" width="1" height="1" fill="url(#audit-entry-fade-grad)" />
+            </mask>
+          </defs>
+          <g class="audit__fade-group" mask="url(#audit-entry-mask)">
+            <path class="audit__track" d="" />
+            <path class="audit__route" d="" pathLength="1" />
+          </g>
+          <path class="audit__arrow" d="" />
+        </svg>
+
+        <div class="audit__ledger">
+          <div class="audit__row" style="--node-color:#FFAB8D;--delay:0.3s">
+            <h3 class="audit__title">Share existing reports</h3>
+            <p class="audit__body">Send the reporting you already run. Nothing new has to be produced for the review.</p>
+            <span class="audit__index" aria-hidden="true">01</span>
+          </div>
+
+          <div class="audit__row" style="--node-color:#FC7EC7;--delay:0.6s">
+            <h3 class="audit__title">Review core metrics</h3>
+            <p class="audit__body">We work through the same measures the benchmarks above use, and find where your figures come apart from them.</p>
+            <span class="audit__index" aria-hidden="true">02</span>
+          </div>
+
+          <div class="audit__row" style="--node-color:#B3A5F5;--delay:0.9s">
+            <h3 class="audit__title">Receive priorities</h3>
+            <p class="audit__body">A written list of where revenue is being lost, ordered by what is worth recovering first.</p>
+            <span class="audit__index" aria-hidden="true">03</span>
+          </div>
+
+          <div class="audit__row" style="--node-color:#7EC98C;--delay:1.2s">
+            <h3 class="audit__title">Discuss the findings</h3>
+            <p class="audit__body">We walk the list through with you and agree what you would want handled first.</p>
+            <span class="audit__index" aria-hidden="true">04</span>
+          </div>
+        </div>
+
+        <div class="audit__foot">
+          <div class="audit__action">
+            <a class="audit__cta" id="audit-cta" href="#booking-calendar">
+              <span class="audit__cta-fill" aria-hidden="true"></span>
+              <span class="audit__cta-label">Book a free revenue audit
+                <svg class="cta-arrow" viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.111 2.598L1.511 10.199L0.804 9.492L8.41 1.885L2.14 1.885L2.14 0.885L9.611 0.885L10.111 0.885L10.111 1.385L10.111 8.856L9.111 8.856L9.111 2.598Z" fill="currentColor"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="booking-calendar" id="booking-calendar" aria-label="Book a free revenue audit">
+      <div class="section-shell">
+        <div class="booking-calendar__frame" data-cal-booking data-cal-link="heiller/revenue-audit"></div>
+      </div>
+    </section>
+
+    <section class="faq" id="questions" aria-labelledby="faq-title">
+      <div class="section-shell faq__layout">
+        <div><div class="eyebrow"><i aria-hidden="true"></i><span>Faq</span></div><h2 id="faq-title"><span>Questions before</span><span>we begin</span></h2></div>
+        <div class="faq__list">
+          <details class="faq__item"><summary>What does the revenue audit include?</summary><p>A focused review of the reporting and workflow information you already have, followed by a prioritized view of where revenue may be delayed or lost.</p></details>
+          <details class="faq__item"><summary>What information do you need?</summary><p>We begin with existing reports and operational context. The first conversation determines what can be reviewed without creating unnecessary preparation work.</p></details>
+          <details class="faq__item"><summary>How long does it take?</summary><p>Timing depends on scope and data availability. We confirm a realistic review window before any information is shared.</p></details>
+          <details class="faq__item"><summary>How is sensitive information handled?</summary><p>We agree on a secure sharing method and limit the review to the information required for the agreed scope.</p></details>
+          <details class="faq__item"><summary>What happens after the review?</summary><p>You receive prioritized findings and recommended next actions, whether or not you engage Heiller for ongoing work.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer" id="site-footer">
+      <canvas class="site-footer__bg" aria-hidden="true"></canvas>
+      <div class="site-footer__top">
+        <a class="site-footer__brand" href="#hero" aria-label="Heiller home">
+          <span class="site-footer__shader-logo" aria-hidden="true"></span>
+          <span>Heiller</span>
+        </a>
+        <p>Revenue-cycle work with clear ownership, close collaboration, and fewer lost handoffs.</p>
+        <a class="site-footer__cta" href="#booking-calendar">
+          <span>Start with a revenue audit</span>
+          <svg class="cta-arrow" viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.111 2.598L1.511 10.199L0.804 9.492L8.41 1.885L2.14 1.885L2.14 0.885L9.611 0.885L10.111 0.885L10.111 1.385L10.111 8.856L9.111 8.856L9.111 2.598Z" fill="currentColor"/></svg>
+        </a>
+      </div>
+      <nav class="site-footer__nav" aria-label="Footer">
+        <div class="site-footer__nav-group">
+          <h2>Explore</h2>
+          <a class="site-footer__link" href="#services">Services</a>
+          <a class="site-footer__link" href="#why-heiller">Why Heiller</a>
+          <a class="site-footer__link" href="#results">Results</a>
+        </div>
+        <div class="site-footer__nav-group">
+          <h2>Company</h2>
+          <a class="site-footer__link" href="#revenue-audit">Revenue audit</a>
+          <a class="site-footer__link" href="#booking-calendar">Book an audit</a>
+          <a class="site-footer__link" href="#questions">Questions</a>
+          <button class="site-footer__privacy-trigger" type="button" data-drawer-open="privacy-drawer">Privacy</button>
+        </div>
+        <div class="site-footer__nav-group">
+          <h2>Contact</h2>
+          <a class="site-footer__link" href="mailto:connect@heillerrcm.com">connect@heillerrcm.com</a>
+          <address class="site-footer__address">
+            3101 N. Central Ave, Ste 183 #7497,<br />
+            Phoenix, AZ 85012,<br />
+            Maricopa, United States
+          </address>
+          <ul class="site-footer__socials">
+            <li><a href="https://www.instagram.com/heillerhealth" target="_blank" rel="noopener noreferrer" aria-label="Heiller on Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>
+            </a></li>
+            <li><a href="https://www.linkedin.com/company/heiller/" target="_blank" rel="noopener noreferrer" aria-label="Heiller on LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M7.5 10.5V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="7.5" cy="7.6" r="1.05" fill="currentColor"/><path d="M11.4 17v-3.6a2.2 2.2 0 0 1 4.4 0V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="site-footer__bottom">
+        <span>© 2026 Heiller</span>
+        <span>Revenue cycle management</span>
+      </div>
+    </footer>
+
+    <div class="drawer-root" data-drawer id="privacy-drawer" data-drawer-hash="#privacy" hidden>
+    <div class="drawer-overlay" data-drawer-overlay></div>
+    <section
+      class="drawer"
+      data-drawer-panel
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="privacy-title"
+    >
+      <div class="drawer__header">
+        <div class="drawer__handle-wrap" aria-hidden="true">
+          <div class="drawer__handle"></div>
+        </div>
+        <h2 class="drawer__title" id="privacy-title">Privacy notice</h2>
+        <button class="drawer__close" type="button" aria-label="Close privacy notice" data-drawer-close>×</button>
+      </div>
+      <div class="drawer__body" data-drawer-scroll>
+        <p class="drawer__effective">Effective August 22, 2026</p>
+        <p class="drawer__lead">
+          This notice explains how Heiller collects and uses information when you visit this website,
+          request a revenue audit, or contact us.
+        </p>
+        <section class="drawer__section">
+          <h3>Information you provide</h3>
+          <p>When you request a revenue audit or contact us, we may collect your name, work email, organization, scheduling selection, and the details you choose to share about your revenue-cycle needs.</p>
+        </section>
+        <section class="drawer__section">
+          <h3>Technical information</h3>
+          <p>Our website and hosting providers may record information such as your IP address, browser and device type, referring page, access time, and pages viewed. This information helps us operate, secure, and improve the site.</p>
+        </section>
+        <section class="drawer__section">
+          <h3>Cookies and similar technologies</h3>
+          <p>Where used, cookies and similar technologies support essential site functions, remember preferences, maintain security, and help us understand site performance. You can control cookies through your browser settings, although some features may then work differently.</p>
+        </section>
+        <section class="drawer__section">
+          <h3>How we use information</h3>
+          <p>We use information to respond to requests, arrange and deliver revenue audits, provide and improve our services, protect the website, maintain business records, and meet legal obligations.</p>
+        </section>
+        <section class="drawer__section">
+          <h3>How information is shared</h3>
+          <p>We may share information with service providers and professional advisers that support our operations, only when they need it for that work. We may also disclose information when required by law or to protect rights and safety. Heiller does not sell or rent your contact information.</p>
+        </section>
+        <section class="drawer__section">
+          <h3>Security and retention</h3>
+          <p>We use reasonable administrative, technical, and organizational safeguards designed to protect information. No online system can guarantee absolute security. We retain information only as long as reasonably necessary for the purpose collected, our legitimate business needs, or legal requirements.</p>
+        </section>
+        <section class="drawer__section">
+          <h3>Your choices</h3>
+          <p>Depending on applicable law, you may ask to access, correct, or delete personal information we hold about you. You may also opt out of non-essential communications at any time.</p>
+        </section>
+        <section class="drawer__section">
+          <h3>Updates and contact</h3>
+          <p>
+            We may update this notice as our website or practices change. For privacy questions or requests,
+            email us at <a href="mailto:connect@heillerrcm.com">connect@heillerrcm.com</a> or write to
+            3101 N. Central Ave, Ste 183 #7497, Phoenix, AZ 85012, Maricopa, United States.
+          </p>
+        </section>
+      </div>
+    </section>
+    </div>
+
+
+    <!-- Specialties drawer. Bottom sheet rather than its own page: the grid is
+         reference material, so it reads better over the page than as a
+         destination. #specialties still opens it directly, so the view stays
+         linkable without a second document. -->
+    <div class="drawer-root" data-drawer id="specialties-drawer" data-drawer-hash="#specialties" hidden>
+    <div class="drawer-overlay" data-drawer-overlay></div>
+    <section
+      class="drawer"
+      data-drawer-panel
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="spec-title"
+    >
+      <div class="drawer__header">
+        <div class="drawer__handle-wrap" aria-hidden="true">
+          <div class="drawer__handle"></div>
+        </div>
+        <h2 class="drawer__title" id="spec-title">Specialties we support</h2>
+        <button class="drawer__close" type="button" aria-label="Close specialties" data-drawer-close>×</button>
+      </div>
+      <div class="drawer__body" data-drawer-scroll>
+          <div class="spec__head">
+            <div class="eyebrow"><i aria-hidden="true"></i><span>Coverage</span></div>
+            <p>Revenue-cycle work is shaped by the specialty behind it. These are the areas the operating model is built around.</p>
+          </div>
+          <ul class="spec__grid">
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 15c0-4 3-7 7-7s6 2.6 6 6c0 2-1.4 3.4-3 3.4S11 16 11 14.4" /><path d="M11 8V5" /><path d="M17 14h3" /></svg><span>Applied Behavior Analysis</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19V9l7-4 7 4v10" /><path d="M9 19v-5h6v5" /><path d="M12 3v2" /></svg><span>Ambulatory Surgery Centers</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 9.6c0 4.6-8.5 9.4-8.5 9.4S3.5 14.2 3.5 9.6A4.1 4.1 0 0 1 12 7.9a4.1 4.1 0 0 1 8.5 1.7Z" /></svg><span>Cardiology</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v16" /><path d="M4 12h16" /></svg><span>Emergency Room</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20V8l8-4 8 4v12" /><path d="M10 20v-5h4v5" /><path d="M12 8v3" /><path d="M10.5 9.5h3" /></svg><span>Hospital RCM</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 20c-3 0-5-2.2-5-5 0-1.4.6-2.6 1.5-3.4A4.4 4.4 0 0 1 9 4c1.6 0 3 .9 3.6 2.2" /><path d="M15 20c3 0 5-2.2 5-5 0-1.4-.6-2.6-1.5-3.4" /><path d="M12 6v14" /></svg><span>Mental Health</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 8l-4 4 4 4" /><path d="M15 8l4 4-4 4" /></svg><span>Medical Coding</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 12S6 6.5 12 6.5 21.5 12 21.5 12 18 17.5 12 17.5 2.5 12 2.5 12Z" /><path d="M12 14.2a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4Z" /></svg><span>Ophthalmology</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 7a2.2 2.2 0 1 0-2.6 2.2L9 13.8" /><path d="M17 17a2.2 2.2 0 1 0 2.6-2.2L15 10.2" /><path d="M4.4 9.2A2.2 2.2 0 1 0 7 12" /><path d="M19.6 14.8A2.2 2.2 0 1 0 17 12" /></svg><span>Orthopedic</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 12a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2Z" /><path d="M5 20c0-3.4 3.1-5.4 7-5.4s7 2 7 5.4" /></svg><span>Physician</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 17.5 15.5 6" /><path d="M13 4l7 7-2.4 2.4L10.6 6.4Z" /><path d="M4 17.5V20h2.5" /></svg><span>Surgery</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M10 3v6.2L5.2 17A2.4 2.4 0 0 0 7.3 20.6h9.4A2.4 2.4 0 0 0 18.8 17L14 9.2V3" /><path d="M9 3h6" /><path d="M8 14h8" /></svg><span>Specialty Laboratory</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5 3.5 7v5.5c0 4.6 3.6 7.6 8.5 8.6 4.9-1 8.5-4 8.5-8.6V7Z" /><path d="M12 9.5v5" /><path d="M9.5 12h5" /></svg><span>Urgent Care</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5s5 5.2 5 8.7a5 5 0 0 1-10 0c0-3.5 5-8.7 5-8.7Z" /></svg><span>Urology</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 3v6c0 3 2 4 4 5s4 2 4 5v2" /><path d="M8 9h8" /><path d="M6 14h5" /></svg><span>Vein and Vascular</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 11l8-6 8 6v9H4Z" /><path d="M12 10v5" /><path d="M9.5 12.5h5" /></svg><span>Home Health</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5 5 6.4v5c0 4.3 2.9 7.5 7 9.1 4.1-1.6 7-4.8 7-9.1v-5Z" /><path d="M9 12l2.2 2.2L15.5 10" /></svg><span>Credentialing</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" /><path d="M12 12a3 3 0 1 1 0 6 3 3 0 0 1 0-6Z" /><path d="M12 12a3 3 0 1 0-5.2 2 3 3 0 0 0 5.2-2Z" /><path d="M12 12a3 3 0 1 1 5.2 2" /></svg><span>Oncology</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 4h11l-1 5.5a5.6 5.6 0 0 1-9 0Z" /><path d="M12 15v5" /><path d="M9 20h6" /></svg><span>Substance Use Disorder</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 4h9l3 3v13H6Z" /><path d="M9 11h6" /><path d="M9 15h4" /></svg><span>IOP Billing</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 9h8v7H8Z" /><path d="M12 6V4" /><path d="M6 12H4" /><path d="M20 12h-2" /><path d="M10 12.5h.01" /><path d="M14 12.5h.01" /></svg><span>RPA in RCM</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v16" /><path d="M15.5 8.2c-.6-1.2-2-1.9-3.6-1.9-2 0-3.4 1-3.4 2.6 0 3.6 7.2 2 7.2 5.7 0 1.7-1.5 2.8-3.6 2.8-1.8 0-3.2-.8-3.8-2" /></svg><span>Underpayments</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4.2 19 8v8l-7 3.8L5 16V8Z" /><path d="M12 12l7-4" /><path d="M12 12v7.8" /><path d="M12 12 5 8" /></svg><span>AI in RCM</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 11a3.4 3.4 0 1 0 0-6.8 3.4 3.4 0 0 0 0 6.8Z" /><path d="M12 11v9" /><path d="M9 17h6" /></svg><span>OBGYN</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 20V10l7-4 7 4v10" /><path d="M12 10v4" /><path d="M10 12h4" /><path d="M9 20v-3h6v3" /></svg><span>Micro Hospitals</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 4v5a4 4 0 0 0 8 0V7" /><path d="M16 12v4a4 4 0 0 1-8 0v-2" /></svg><span>Gastroenterology</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h4l2-5 3 10 2.5-5H21" /></svg><span>Acute Care</span></li>
+            <li class="spec__item"><svg class="spec__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20s7-4.6 7-9.4A3.9 3.9 0 0 0 12 8.4 3.9 3.9 0 0 0 5 10.6C5 15.4 12 20 12 20Z" /><path d="M9.5 12h5" /></svg><span>Pain Management</span></li>
+          </ul>
+      </div>
+    </section>
+    </div>
+  </div>
+
+
+  <!-- ShaderBackground ("Waves"), a vanilla WebGL port of the 21st.dev component.
+       Same fragment shader + UNIFORMS as the React version; mounted behind the
+       hero and footer. The hero band is CSS-flipped; the footer uses the native
+       shader orientation so the band reads as its vertical mirror. -->
+
+  <!-- Audit flow: a gradient route snakes along the dashed dividers
+       and lands an arrowhead on the CTA or desktop calendar. Geometry
+       is measured from the live layout so it stays welded to the rows
+       at every width. -->
+
+
+  <!-- Audit numerals: filled with the site's mesh-gradient shader,
+       recoloured to the blue/gold palette. One offscreen WebGL mesh is
+       composited into each numeral through a per-number canvas masked
+       to its glyph, so the numbers keep their type and gain the flow. -->
+
+  <!-- Liquid-glass contact action inside the Services artwork. -->
+
+  <!-- Paper-inspired native WebGL mesh behind the Services contact action. -->
+  <script type="module" src="/page-runtime.js"></script>
+  <script type="module" src="/services-shader.js"></script>
+  <script type="module" src="/workflow-ledger.js"></script>
+  <script type="module" src="/dedicated-team.ts"></script>
+  <script type="module" src="/cal-booking.ts"></script>
+</body>
+</html>

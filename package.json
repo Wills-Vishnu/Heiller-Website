@@ -1,0 +1,21 @@
+{
+  "name": "heiller",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Heiller — revenue cycle management. Marketing site.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 4173",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11"
+  },
+  "dependencies": {
+    "@calcom/embed-snippet": "^1.3.3",
+    "@paper-design/shaders": "^0.0.80"
+  }
+}
