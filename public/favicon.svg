@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    /* The mark is drawn without a plate, so it has to answer to whatever the
+       tab strip is painted with: ink on a light theme, white on a dark one. */
+    path { fill: #0c0a09; }
+    @media (prefers-color-scheme: dark) { path { fill: #ffffff; } }
+  </style>
+  <path d="M25 75C25 88.807 13.807 100 0 100V75C0 61.193 11.193 50 25 50V75ZM50 50C63.807 50 75 61.193 75 75V100C61.193 100 50 88.807 50 75C50 88.807 38.807 100 25 100V75C25 61.193 36.193 50 50 50ZM75 50C88.807 50 100 61.193 100 75V100C86.193 100 75 88.807 75 75V50ZM0 0C13.807 0 25 11.193 25 25V50C11.193 50 0 38.807 0 25V0ZM75 25C75 38.807 63.807 50 50 50C36.193 50 25 38.807 25 25V0C38.807 0 50 11.193 50 25C50 11.193 61.193 0 75 0V25ZM100 25C100 38.807 88.807 50 75 50V25C75 11.193 86.193 0 100 0V25Z"/>
+</svg>
